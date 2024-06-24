@@ -8,7 +8,7 @@
       "name": "BSD-3 license",
       "url": "https://opensource.org/licenses/BSD-3-Clause"
     },
-    "version": "3.0.266"
+    "version": "3.0.267"
   },
   "servers": [
     {
@@ -219,12 +219,12 @@
           }
         ],
         "requestBody": {
-          "description": "`{EntityName}` information to insert or update.\n\nThe input parameter must be used in the `{EntityName}Data` record structure inside the `FieldType` parameter in the foreign key fields.",
+          "description": "`{EntityName}` information to insert or update.\n\nThe input parameter must be used in the `{EntityNameUpsertData}` record structure inside the `FieldType` parameter in the foreign key fields.",
           "content": {
             "text/plain": {
               "schema": {
                 "type": "string",
-                "description": "`{EntityName}` information to insert or update.\n\nThe input parameter must be used in the `{EntityName}Data` record structure inside the `FieldType` parameter in the foreign key fields.",
+                "description": "`{EntityName}` information to insert or update.\n\nThe input parameter must be used in the `{EntityNameUpsertData}` record structure inside the `FieldType` parameter in the foreign key fields.",
                 "default": ""
               }
             }
@@ -277,12 +277,12 @@
           }
         ],
         "requestBody": {
-          "description": "`{EntityName}` information to insert.\n\nThe input parameter must be used in the `{EntityName}Data` record structure inside the `FieldType` parameter in the foreign key fields.",
+          "description": "`{EntityName}` information to insert.\n\nThe input parameter must be used in the `{EntityNameInsertData}` record structure inside the `FieldType` parameter in the foreign key fields.",
           "content": {
             "text/plain": {
               "schema": {
                 "type": "string",
-                "description": "`{EntityName}` information to insert.\n\nThe input parameter must be used in the `{EntityName}Data` record structure inside the `FieldType` parameter in the foreign key fields.",
+                "description": "`{EntityName}` information to insert.\n\nThe input parameter must be used in the `{EntityNameInsertData}` record structure inside the `FieldType` parameter in the foreign key fields.",
                 "default": ""
               }
             }
@@ -358,12 +358,12 @@
           }
         ],
         "requestBody": {
-          "description": "{EntityName} information to update.\n\nThe input parameter must be used in the `{EntityName}Data` record structure inside the `FieldType` parameter in the foreign key fields.",
+          "description": "{EntityName} information to update.\n\nThe input parameter must be used in the `{EntityNameUpdateData}` record structure inside the `FieldType` parameter in the foreign key fields.",
           "content": {
             "text/plain": {
               "schema": {
                 "type": "string",
-                "description": "{EntityName} information to update.\n\nThe input parameter must be used in the `{EntityName}Data` record structure inside the `FieldType` parameter in the foreign key fields.",
+                "description": "{EntityName} information to update.\n\nThe input parameter must be used in the `{EntityNameUpdateData}` record structure inside the `FieldType` parameter in the foreign key fields.",
                 "default": ""
               }
             }
