@@ -8,7 +8,7 @@
       "name": "BSD-3 license",
       "url": "https://opensource.org/licenses/BSD-3-Clause"
     },
-    "version": "3.0.285"
+    "version": "3.0.286"
   },
   "servers": [
     {
@@ -120,7 +120,7 @@
         "tags": [
           "api"
         ],
-        "description": "Use the `{EntitiesName}Text` object resource to insert or update (Upsert) a list of `{EntityName}List` using `{UniqueFields}` field(s) value.\n\nYou can supply the required field values in the request data, and then use the `PATCH` method of the resource.\n\n{Request_List}\n\nForeign key fields are: `{EntityForeignKeys}`\n\n### Update a record of {EntityName}\n{Errors_NotFound} {Info_PrimaryKeyCannotChange}\n{Info_Update}\n\n**Attention!**, this can also cause an incorrect row update, but at the same time enables efficient data transfer between systems.\n\n### Create a new record of {EntityName}\n{Info_Insert}\n\nThe response body will contain the full `{EntityName}` record list structure of the updated or created record if the call is successful. {Response_List}",
+        "description": "Use the `{EntitiesName}Text` object resource to insert or update (Upsert) a list of `{EntityName}List` using `{UniqueFields}` field(s) value.\n\nYou can supply the required field values in the request data, and then use the `PATCH` method of the resource.\n\n{Request_List}\n\nForeign key fields are: `{EntityForeignKeys}`\n\n### Update a record of {EntityName}\n{Errors_NotFound} {Info_PrimaryKeyCannotChange}\n{Info_Update}\n\n**Attention!**, this can also cause an incorrect row update, but at the same time enables efficient data transfer between systems.\n\n### Create a new record of {EntityName}\n{Info_Insert}\n\nThe response body will contain the record list structure of the updated or created record if the call is successful. {Response_List}",
         "operationId": "PatchEntities",
         "parameters": [
           {
@@ -191,7 +191,7 @@
         "tags": [
           "api"
         ],
-        "description": "Use the `{EntityNameUpsertData}` object resource to insert or update (Upsert) `{EntityName}` using `{UniqueFields}` field(s) value.\n\nYou can supply the required field values in the request data, and then use the `POST` method of the resource.\n\n{Request_Upsert_Record}\n\nForeign key fields are: `{EntityForeignKeys}`\n\n### Update a record of {EntityName}\n{Errors_NotFound}. {Info_PrimaryKeyCannotChange}\n{Info_Update}\n\n### Create a new record of {EntityName}\n{Info_Insert}\n\nThe response body will contain the full `{EntityName}` object of the updated or created record if the call is successful. {Response_Record}",
+        "description": "Use the `{EntityNameUpsertData}` object resource to insert or update (Upsert) `{EntityName}` using `{UniqueFields}` field(s) value.\n\nYou can supply the required field values in the request data, and then use the `POST` method of the resource.\n\n{Request_Upsert_Record}\n\nForeign key fields are: `{EntityForeignKeys}`\n\n### Update a record of {EntityName}\n{Errors_NotFound}. {Info_PrimaryKeyCannotChange}\n{Info_Update}\n\n### Create a new record of {EntityName}\n{Info_Insert}\n\nThe response body will contain the object of the updated or created record if the call is successful. {Response_Record}",
         "operationId": "UpsertEntity",
         "parameters": [
           {
@@ -249,7 +249,7 @@
         "tags": [
           "api"
         ],
-        "description": "Use the `{EntityNameInsertData}` object resource to create new records.\n\nYou can supply the required field values in the request data, and then use the `POST` method of the resource.\n\n{Request_Insert_Record}\n\nForeign key fields are: `{EntityForeignKeys}`\n\n### Create a new record of {EntityName}\n{Info_PrimaryKey}\n{Info_Insert}\n{Errors_MultibleRows}\n\nThe response body will contain the full `{EntityName}` object of the created record if the call is successful. {Response_Record}\n\n",
+        "description": "Use the `{EntityNameInsertData}` object resource to create new records.\n\nYou can supply the required field values in the request data, and then use the `POST` method of the resource.\n\n{Request_Insert_Record}\n\nForeign key fields are: `{EntityForeignKeys}`\n\n### Create a new record of {EntityName}\n{Info_PrimaryKey}\n{Info_Insert}\n{Errors_MultibleRows}\n\nThe response body will contain the object of the created record if the call is successful. {Response_Record}\n\n",
         "operationId": "CreateEntity",
         "parameters": [
           {
@@ -309,7 +309,7 @@
         "tags": [
           "api"
         ],
-        "description": "Use the `{EntityNameUpdateData}` object resource to update `{EntityName}` using `{UniqueFields}` field(s) value.\n\nProvide the updated record information in your request data and use the `PUT` method of the resource with a specific record ID to update that record. \n\n{Request_Update_Record}\n\nForeign key fields are: `{EntityForeignKeys}`\n\n### Update a record of {EntityName}\n{Errors_NotFound}. {Info_PrimaryKeyCannotChange}\n{Errors_InvalidField}\n{Errors_MultibleRows}\n\nThe response body will contain the full `{EntityName}` object of the updated or created record if the call is successful. {Response_Record}",
+        "description": "Use the `{EntityNameUpdateData}` object resource to update `{EntityName}` using `{UniqueFields}` field(s) value.\n\nProvide the updated record information in your request data and use the `PUT` method of the resource with a specific record ID to update that record. \n\n{Request_Update_Record}\n\nForeign key fields are: `{EntityForeignKeys}`\n\n### Update a record of {EntityName}\n{Errors_NotFound}. {Info_PrimaryKeyCannotChange}\n{Errors_InvalidField}\n{Errors_MultibleRows}\n\nThe response body will contain the object of the updated record if the call is successful. {Response_Record}",
         "operationId": "UpdateEntity",
         "parameters": [
           {
@@ -388,7 +388,7 @@
         "tags": [
           "api"
         ],
-        "description": "Use the query string resource to delete `{EntityName}` record. The method contains two parameters `Id` and `Name`. Specify the record `{Id}` and use the `DELETE` method of the resource to delete a record.\n\n{Response_Record}\n\nForeign key fields are: `{EntityForeignKeys}`\n\n### Delete a record of {EntityName}\n{Errors_NotFound}\n{Errors_InvalidField}\n{Errors_MultibleRows}\n\nThe response body will contain the full `{EntityName}` object of the deleted record if the call is successful.",
+        "description": "Use the query string resource to delete `{EntityName}` record. The method contains two parameters `Id` and `Name`. Specify the record `{Id}`, `Name` using `{UniqueFields}` field(s) value and use the `DELETE` method of the resource to delete a record.\n\n{Response_Record}\n\nForeign key fields are: `{EntityForeignKeys}`\n\n### Delete a record of {EntityName}\n{Errors_NotFound}\n{Errors_InvalidField}\n{Errors_MultibleRows}\n\nThe response body will contain the object of the deleted record if the call is successful.",
         "operationId": "DeleteEntity",
         "parameters": [
           {
@@ -520,7 +520,7 @@
         "tags": [
           "api"
         ],
-        "description": "Use the `{EntitiesName}Data` object resource to insert or update (Upsert) a list of `{EntityName}Data` using `{UniqueFields}` field(s) value.\n\nYou can supply the required field values in the request data, and then use the `POST` method of the resource.\n\n{Request_List}\n\nForeign key fields are: `{EntityForeignKeys}`\n\n### Update a record of {EntityName}\n{Info_Update}\n\n**Attention!**, this can also cause an incorrect row update, but at the same time enables efficient data transfer between systems.\n\n### Create a new record of {EntityName}\n{Info_Insert}\n\nThe response body will contain the full `{EntityName}` record list structure of the updated or created record if the call is successful. {Response_List}",
+        "description": "Use the `{EntitiesName}Data` object resource to insert or update (Upsert) a list of `{EntityName}Data` using `{UniqueFields}` field(s) value.\n\nYou can supply the required field values in the request data, and then use the `POST` method of the resource.\n\n{Request_List}\n\nForeign key fields are: `{EntityForeignKeys}`\n\n### Update a record of {EntityName}\n{Info_Update}\n\n**Attention!**, this can also cause an incorrect row update, but at the same time enables efficient data transfer between systems.\n\n### Create a new record of {EntityName}\n{Info_Insert}\n\nThe response body will contain the record list structure of the updated or created record if the call is successful. {Response_List}",
         "operationId": "PatchSubEntities",
         "parameters": [
           {
@@ -750,7 +750,7 @@
         "tags": [
           "api"
         ],
-        "description": "Use the `{EntityName}Post` object resource to insert or update (Upsert) `{EntityName}` using `{UniqueFields}` field(s) value.\n\nYou can supply the required field values in the request data, and then use the `POST` method of the resource.\n\n{Request_Record}\n\nForeign key fields are: `{EntityForeignKeys}`\n\n### Update a record of {EntityName}\n{Errors_NotFound}. {Info_PrimaryKeyCannotChange}\n{Info_Update}\n\n### Create a new record of {EntityName}\n{Info_Insert}\n\nThe response body will contain the full `{EntityName}` object of the updated or created record if the call is successful. {Response_Record}",
+        "description": "Use the `{EntityName}Post` object resource to insert or update (Upsert) `{EntityName}` using `{UniqueFields}` field(s) value.\n\nYou can supply the required field values in the request data, and then use the `POST` method of the resource.\n\n{Request_Record}\n\nForeign key fields are: `{EntityForeignKeys}`\n\n### Update a record of {EntityName}\n{Errors_NotFound}. {Info_PrimaryKeyCannotChange}\n{Info_Update}\n\n### Create a new record of {EntityName}\n{Info_Insert}\n\nThe response body will contain the object of the updated or created record if the call is successful. {Response_Record}",
         "operationId": "UpsertSubEntity",
         "parameters": [
           {
@@ -842,7 +842,7 @@
         "tags": [
           "api"
         ],
-        "description": "Use the query string resource to delete `{EntityName}` record. The method contains two parameters `SubId` and `SubName`. Specify the record `Id` and use the `DELETE` method of the resource to delete a record.\n\nMethod returns the `{EntityName}` record structure within `AbstractText` and `AbstractLong` records in foreign key fields.\n\nForeign key fields are: `{EntityForeignKeys}`\n\n### Delete a record of {EntityName}\n{Errors_NotFound}\n{Errors_InvalidField}\n{Errors_MultibleRows}\n\nThe response body will contain the full `{EntityName}` object of the deleted record if the call is successful.",
+        "description": "Use the query string resource to delete `{EntityName}` record. The method contains two parameters `SubId` and `SubName`. Specify the record `SubId`, `SubName` using `{UniqueFields}` field(s) value and use the `DELETE` method of the resource to delete a record.\n\n{Response_Record}\n\nForeign key fields are: `{EntityForeignKeys}`\n\n### Delete a record of {EntityName}\n{Errors_NotFound}\n{Errors_InvalidField}\n{Errors_MultibleRows}\n\nThe response body will contain the object of the deleted record if the call is successful.",
         "operationId": "DeleteSubEntity",
         "parameters": [
           {
